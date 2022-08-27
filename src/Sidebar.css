@@ -48,9 +48,9 @@
     min-width: 10vw;
 }
 
-.sidebar__headerRight > .MuiSvgIcon-root{
-    margin-right: 2vw;
+.sidebar__headerRight  .MuiSvgIcon-root{
     font-size: 24px !important;
+    color: #850E35;
 }
 
 .sidebar__chats{
@@ -58,6 +58,7 @@
     flex: 1;
     overflow: scroll;
     scrollbar-width: none;
+    border-bottom-left-radius: 10px;
 }
 
 .sidebar__chats::-webkit-scrollbar { 

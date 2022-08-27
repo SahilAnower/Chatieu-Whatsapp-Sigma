@@ -7,12 +7,21 @@ import AttachmentIcon from '@mui/icons-material/Attachment';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import MicIcon from '@mui/icons-material/Mic';
 import "./SingleChat.css"
+// import { makeStyles } from '@mui/styles';
 import db from './firebase';
 import { useStateValue } from './StateProvider';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 
+// const useStyles = makeStyles(theme => ({
+//   customHoverFocus: {
+//     "&:hover, &.Mui-focusVisible": { backgroundColor: "yellow" }
+//   }
+// }));
+
 function SingleChat() {
+
+  // const classes=useStyles();
 
   const [input, setInput] = useState("");
   const [seed, setSeed] = useState("");
@@ -88,14 +97,18 @@ function SingleChat() {
         ))}
       </div>
       <div className='chat__footer'>
-        <InsertEmoticonIcon />
+        <IconButton >
+          <InsertEmoticonIcon />
+        </IconButton>
         <form>
           <input value={input}
             onChange={(e) => setInput(e.target.value)}
             type="text" placeholder='Type A Message' />
           <button onClick={sendMessage}>Send a message</button>
         </form>
-        <MicIcon />
+        <IconButton>
+          <MicIcon />
+        </IconButton>
       </div>
     </div>
   )
