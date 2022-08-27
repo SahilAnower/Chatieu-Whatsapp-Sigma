@@ -10,7 +10,7 @@
 
 # production
 /build
-/TO-DO
+/TO-DO.txt
 
 # misc
 .DS_Store
